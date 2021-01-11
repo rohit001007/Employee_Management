@@ -12,6 +12,17 @@ class employeeService {
             }catch (error) {
         }
     }
+
+    getDataService = () => {
+        try {   
+                return model.read().then((result) => {
+                    return ({ message: `* Data Found *`, data: result })
+                }).catch((error) => {
+                    return ({ message: `* Data Not Found... `, error: error })
+                })
+            }catch (error) {
+        }
+    }
 }
 
 module.exports = new employeeService();

@@ -43,6 +43,19 @@ class employeeModel {
             }catch (error) {
         }
     }
+
+    read = () => {
+        try {
+                return new Promise((resolve, reject) => {
+                    model.find().then((result) => {
+                        resolve(result)
+                    }).catch((error) => {
+                        reject(error)
+                    })
+                })
+            }catch (error) {
+        }
+    }
 }
 
 module.exports = new employeeModel()
