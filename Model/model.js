@@ -26,7 +26,6 @@ const schema = new mongoose.Schema({
 }, { timestamps: true });
 
 let model = mongoose.model('samples', schema)
-
 class employeeModel {
 
     create = (req) => {

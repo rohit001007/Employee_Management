@@ -1,5 +1,4 @@
 let model = require('../Model/model')
-
 class employeeService {
 
     addDataService = (req) => {

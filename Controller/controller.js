@@ -1,6 +1,5 @@
 let response = {}
 let service = require('../Services/service')
-
 class employeeController {
 
     addDataController = (req, res) => {
