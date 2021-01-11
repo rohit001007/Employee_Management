@@ -44,10 +44,23 @@ class employeeModel {
         }
     }
 
-    read = () => {
+    read = (req) => {
         try {
                 return new Promise((resolve, reject) => {
-                    model.find().then((result) => {
+                    model.find(req.id).then((result) => {
+                        resolve(result)
+                    }).catch((error) => {
+                        reject(error)
+                    })
+                })
+            }catch (error) {
+        }
+    }
+
+    update = (req) => {
+        try {
+                return new Promise((resolve, reject) => {
+                    model.findByIdAndUpdate(req.id,req.data).then((result) => {
                         resolve(result)
                     }).catch((error) => {
                         reject(error)

@@ -23,6 +23,21 @@ class employeeService {
             }catch (error) {
         }
     }
+    
+    updateDataService = (req) => {
+        try {
+            let id = req.params.employeeId;
+            let userData = {
+                id,data:req.body
+            }
+                return model.update(userData).then((result) => {
+                    return ({ message: ` * Updated Data Successfully *`, data: result })
+                }).catch((error) => {
+                    return ({ message: ` * Update Data Failed... *`, error: error })
+                })
+            }catch (error) {
+        }
+    }
 }
 
 module.exports = new employeeService();
