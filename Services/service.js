@@ -57,6 +57,19 @@ class employeeService {
             }catch (error) {
         }
     }
+
+    deleteDataService = (req) => {
+        try {
+            let id = req.params.employeeId;
+            
+                return model.delete(id).then((result) => {
+                    return ({ message: ` * Deleted Data Successfully *`})
+                }).catch((error) => {
+                    return ({ message: ` * Deleting Data Failed... *`, error: error })
+                })
+            }catch (error) {
+        }
+    }
 }
 
 module.exports = new employeeService();
