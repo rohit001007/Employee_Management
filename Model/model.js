@@ -18,8 +18,6 @@ const schema = new mongoose.Schema({
                 type: Number,
                 required: [true, 'Mobile Number Is Required'],
                 unique: true,
-                min: 10,
-                max: 10
             },
             companyName: {
                 type: String,
@@ -32,6 +30,7 @@ let model = mongoose.model('samples', schema)
 class employeeModel {
 
     create = (req) => {
+        
         try {
                 return new Promise((resolve, reject) => {
                     model.create(req).then((result) => {
@@ -45,9 +44,10 @@ class employeeModel {
     }
 
     read = (req) => {
-        try {
+        
+        try {   
                 return new Promise((resolve, reject) => {
-                    model.find(req.id).then((result) => {
+                    model.find(req).then((result) => {
                         resolve(result)
                     }).catch((error) => {
                         reject(error)
@@ -58,9 +58,24 @@ class employeeModel {
     }
 
     update = (req) => {
+        
         try {
                 return new Promise((resolve, reject) => {
                     model.findByIdAndUpdate(req.id,req.data).then((result) => {
+                        resolve(result)
+                    }).catch((error) => {
+                        reject(error)
+                    })
+                })
+            }catch (error) {
+        }
+    }
+
+    delete = (req) => {
+        
+        try {
+                return new Promise((resolve, reject) => {
+                    model.findByIdAndDelete(req.id).then((result) => {
                         resolve(result)
                     }).catch((error) => {
                         reject(error)

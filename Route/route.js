@@ -4,6 +4,6 @@ let controller = require('../Controller/controller')
 
 route.post('/employee/create', controller.addDataController)
 route.get('/employee/read', controller.getDataController)
-route.put('/employee/update/:employeeId',controller.updateDataController)
+route.post('/employee/readOne/:employeeId', controller.getDataByIdController)
 
 module.exports = route;

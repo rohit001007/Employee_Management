@@ -3,19 +3,22 @@ let model = require('../Model/model')
 class employeeService {
 
     addDataService = (req) => {
+        
         try {
                 return model.create(req).then((result) => {
                     return ({ message: `* Data Added Successfully *`, data: result })
                 }).catch((error) => {
-                    return ({ message: `* Data Adding Failed... `, error: error })
+                    return ({ message: `* Data Adding Failed... `, data: error })
                 })
             }catch (error) {
         }
     }
 
     getDataService = () => {
+        
         try {   
-                return model.read().then((result) => {
+            let req = {}
+                return model.read(req).then((result) => {
                     return ({ message: `* Data Found *`, data: result })
                 }).catch((error) => {
                     return ({ message: `* Data Not Found... `, error: error })
@@ -23,8 +26,9 @@ class employeeService {
             }catch (error) {
         }
     }
-    
+
     updateDataService = (req) => {
+        
         try {
             let id = req.params.employeeId;
             let userData = {

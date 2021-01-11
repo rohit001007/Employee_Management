@@ -22,7 +22,7 @@ class employeeController {
         }
     }
 
-    getDataController = (res) => {
+    getDataController = (req,res) => {
 
         try { 
                 service.getDataService().then((result) => {
