@@ -27,6 +27,21 @@ class employeeService {
         }
     }
 
+    getDataByIdService = (req) => {
+        
+        try {   
+            let request = {
+                "_id":req.params.employeeId
+            }
+                return model.read(request).then((result) => {
+                    return ({ message: `* Data Found By ID *`, data: result })
+                }).catch((error) => {
+                    return ({ message: `* Data Not Found By ID... `, error: error })
+                })
+            }catch (error) {
+        }
+    }
+
     updateDataService = (req) => {
         
         try {

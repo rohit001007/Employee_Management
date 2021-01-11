@@ -70,20 +70,7 @@ class employeeModel {
             }catch (error) {
         }
     }
-
-    delete = (req) => {
-        
-        try {
-                return new Promise((resolve, reject) => {
-                    model.findByIdAndDelete(req.id).then((result) => {
-                        resolve(result)
-                    }).catch((error) => {
-                        reject(error)
-                    })
-                })
-            }catch (error) {
-        }
-    }
+    
 }
 
 module.exports = new employeeModel()
