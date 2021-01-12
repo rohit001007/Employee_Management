@@ -16,8 +16,8 @@ class employeeService {
     getDataService = () => {
         
         try {   
-            let req = {}
-                return model.read(req).then((result) => {
+            let request = {}
+                return model.read(request).then((result) => {
                     return ({ message: `* Data Found *`, data: result })
                 }).catch((error) => {
                     return ({ message: `* Data Not Found... `, error: error })
