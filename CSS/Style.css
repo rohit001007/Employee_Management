@@ -8,9 +8,16 @@ body{
     font-family: "adobe-clean", sans-serif;
 }
 
+img{
+    height: 20px;
+}
+
 .button{
-    font-family: sans-serif;
+    font-family: inherit;
     font-size: x-large;
+    color: white;
+    margin-left: 25px;
+    background-color: cornflowerblue;
 }
 
 .table{
