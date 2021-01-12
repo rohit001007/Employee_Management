@@ -14,5 +14,13 @@ body{
 }
 
 .table{
+    margin-left: 17%;
+    position: absolute;
+    top: 150px;
+}
     
+table th,tr{
+    background-color: rgb(246, 243, 243);
+    text-align: center;
+    padding: 8px;
 }
