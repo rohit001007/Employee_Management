@@ -1,7 +1,18 @@
-    selectValue = (value) => {
-        let rowdata = "../JSON/Data.json";
-        for(let i=0;i<value.length;i++){
-            rowdata += '<option>'+value[i]+'</option>'
-        }
-        document.getElementById('table').innerHTML = rowdata;
-    }
+$.ajax({
+    dataType: "json",
+    url: url,
+    data: data,
+    success: success
+});
+
+$.getJSON( "ajax/test.json", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      items.push( "<li id='" + key + "'>" + val + "</li>" );
+    });
+   
+    $( "<ul/>", {
+      "class": "my-new-list",
+      html: items.join( "" )
+    }).appendTo( "body" );
+  });

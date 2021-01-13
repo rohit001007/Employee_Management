@@ -3,27 +3,36 @@ body{
 }
 
 .welcome{
+    background-color: cornflowerblue;
     text-align: center;
     opacity: 1;
-    font-family: "adobe-clean", sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 img{
     height: 20px;
+    margin-right: 7px;
 }
 
 .button{
-    font-family: inherit;
-    font-size: x-large;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    outline: auto;
     color: white;
-    margin-left: 25px;
+    margin: 27px;
     background-color: cornflowerblue;
 }
 
-.table{
-    margin-left: 17%;
+.table {
+    display: flex;
+    margin-left: 51px;
     position: absolute;
     top: 150px;
+    padding: 16px;
+    color: darkviolet;
 }
     
 table th,tr{
