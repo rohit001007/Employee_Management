@@ -6,12 +6,12 @@ input{
     font-size: larger;
     border-radius: 12px;
     font-family: system-ui;
-    padding: 28px;
+    padding: 16px;
 }
 
 .form{
-    width: 422px;
-    background-color: darkblue;
+    width: 323px;
+    background-color:black;
     color: white;
     top: 50%;
     display: flex;
