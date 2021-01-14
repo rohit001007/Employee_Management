@@ -5,26 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../CSS/FormStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="../HTML/Main.html">
     <title>Employee Editing</title>
 </head>
 
 <body>
-  <div class="form">
+  <div class="Main">
+    <form>
 
     <h1>Edit Employee</h1>
 
-      <input type="text" id="firstName" placeholder="First Name" ><br>
+    <div class="Main2">
+
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <span id="firstName_err"></span>
       
-      <input type="text" id="lastName" placeholder="Last Name" ><br>
+      <input type="text" id="lastName" placeholder="Last Name" required>
+      <span id="lastName_err"></span>
 
-      <input type="text" id="eMail" placeholder="Email"><br>
+      <input type="text" id="eMail" placeholder="Email" required>
+      <span id="eMail_err"></span>
 
-      <input type="tel" id="mobile" placeholder="Mobile Number" ><br>
+      <input type="tel" id="mobile" placeholder="Mobile Number" required>
+      <span id="mobile_err"></span>
 
-      <input type="text" id="companyName" placeholder="Company Name" ><br>
+      <input type="text" id="companyName" placeholder="Company Name" required>
+      <span id="companyName_err"></span>
 
-      <button class="button1" type="submit">Submit</button>
+    </div>
+    
+    <div>
+      <button class="button" type="submit" onclick= "check()">Submit</button>
+    </div>
 
-  </div>  
+    </form>
+  </div>
+
+  <script src="../JavaScript/addFormValidation.js"></script>
+  
 </body>
 </html>
