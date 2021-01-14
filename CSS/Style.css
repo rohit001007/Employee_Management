@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    font-size: x-small;
     background-color: cornflowerblue;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

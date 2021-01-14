@@ -15,8 +15,10 @@ input{
     padding: 16px;
 }
 
-.form{
-    box-shadow: 10px 10px;
+
+.Main{
+    border: 1px solid cornflowerblue;
+    box-shadow: 5px 5px cornflowerblue;
     width: 300px;
     border-radius: 25px;
     display: flex;
@@ -24,22 +26,40 @@ input{
     align-items: center;
 }
 
-.form input[type="text"], .form input[type="tel"] {
+.Main2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    padding: 4px;
+}
+
+.Main input[type="text"], .Main input[type="tel"] {
     border: none;
     border-bottom: 1px solid #070707;
     font-family: none;
     font-size: 17px;
+    padding: 25px;
+    margin: 2px;
     height: 1px;
     background: transparent;
 }
 
-.button1{
+span {
+    color: red;
+}
+
+button {
     display: flex;
-    padding: 5px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
-    outline: auto;
-    color: white;
-    margin: 13px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    margin: 9px;
+    padding: 6px;
+    border-radius: 5px;
+    outline: none;
+    width: 180px;
     background-color: cornflowerblue;
 }
