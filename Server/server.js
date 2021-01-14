@@ -7,7 +7,7 @@ const route = require('../Route/route')
 let port = 9000;
 
 app.use(cors())
-app.use(express.json())
+app.use(express.json()) 
 app.use('/api', route)
 
 app.use('/', function getDataController (req, res) {
