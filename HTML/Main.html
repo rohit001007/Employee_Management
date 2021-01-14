@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../CSS/Style.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../JavaScript/File.js"></script>
     <title>Employee Management</title>
 </head>
@@ -14,11 +15,14 @@
         <h1>Welcome To Employee Management</h1>
     </div>
     
-    <div>
-        
-        <form action='./Form.html'>
-            <button class="button" type="save"><img src='../Images/add-user-svgrepo-com.svg'> Add Employee</button><br>
-        </form>
+    <div class="Main">
+
+        <button class="button" onclick="addForm()"><img src='../Images/add-user-svgrepo-com.svg'>Add Employee</button>
+        <script>
+            function addForm() {
+            window.location.href = "../HTML/addForm.html";
+        }
+        </script>
 
         <table class="table" id="table">
             <tr>
