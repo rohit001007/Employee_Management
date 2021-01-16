@@ -32,8 +32,9 @@ h1{
 }
 
 img{
+    display: flex;
     height: 20px;
-    margin-right: 7px;
+    padding: 3px
 }
 
 .button{
@@ -48,8 +49,17 @@ img{
     background-color: cornflowerblue;
 }
 
+.button1{
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+
 .table {
     width: 100%;
+    overflow-y: auto;
     padding: 16px;
     color:cornflowerblue;
 }
