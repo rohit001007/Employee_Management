@@ -73,7 +73,7 @@ class employeeModel {
     delete = (req) => {
         try {
                 return new Promise((resolve, reject) => {
-                    model.findByIdAndDelete(req.id).then((result) => {
+                    model.findByIdAndDelete(req).then((result) => {
                         resolve(result)
                     }).catch((error) => {
                         reject(error)

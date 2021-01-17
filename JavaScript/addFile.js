@@ -32,7 +32,10 @@ companyName = $('#companyName');
             contentType : "application/json",
             data : JSON.stringify(data),
             success : function(newData) {
-                console.log(newData)
+                alert(newData.message)
+            },
+            error: function () {
+                alert('* Error In Adding Data...!!!')
             }
         })
     }
