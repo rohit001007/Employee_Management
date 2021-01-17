@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../CSS/FormStyle.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../JavaScript/addFormValidation.js"></script>
+    <script src="../JavaScript/addFile.js"></script>
     <link rel="stylesheet" href="../HTML/Main.html">
     <title>Employee Adding</title>
 </head>
@@ -35,7 +37,14 @@
     </div>
     
     <div>
-      <button class="button" type="submit" onclick= "check()">Submit</button>
+      <button class="button" type="submit" onclick= "myFunction()" >Submit</button>
+      <script>
+        function myFunction() {
+          if (check())
+            addData();
+        }
+
+      </script>
     </div>
     
   </div>
