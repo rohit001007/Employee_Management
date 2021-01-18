@@ -39,10 +39,28 @@ function getData() {
 
 const submitId = (id) => {
   console.log(id)
+  localStorage.setItem('employeeId',id)
   window.location.href ="../Html/editForm.html";
 }
 
- deleteData = (id) => {
+function updateData (id)  {
+    $.ajax({
+      type:"PUT",
+      url: `http://localhost:9000/api/employee/update/${id}`,
+      data:{
+        firstName : firstName,
+        lastName : lastName,
+        eMail : eMail,
+        mobile : mobile,
+        companyName : companyName
+      },
+      success: function(data){
+        alert(data.message)
+      }
+  })
+}
+
+deleteData = (id) => {
   $.ajax({
     type: 'DELETE',
     url: `http://localhost:9000/api/employee/delete/${id}`,
