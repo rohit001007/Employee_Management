@@ -43,19 +43,38 @@ const submitId = (id) => {
   window.location.href ="../Html/editForm.html";
 }
 
-function updateData (id)  {
+$(document).ready(function () {
+
+  firstName = $('#firstName');
+  lastName =  $('#lastName');
+  eMail = $('#eMail');
+  mobile = $('#mobile');
+  companyName = $('#companyName');
+  })
+
+
+function updateData ()  {
+
+  var data = {
+    "firstName" : firstName.val(),
+    "lastName" : lastName.val(),
+    "eMail" : eMail.val(),
+    "mobile" : mobile.val(),
+    "companyName" : companyName.val()
+  };
+  console.log(data)
+
+
+
+  var id = localStorage.getItem('employeeId')
     $.ajax({
       type:"PUT",
       url: `http://localhost:9000/api/employee/update/${id}`,
-      data:{
-        firstName : firstName,
-        lastName : lastName,
-        eMail : eMail,
-        mobile : mobile,
-        companyName : companyName
-      },
+      data:data,
       success: function(data){
+        console.log(data)
         alert(data.message)
+
       }
   })
 }
