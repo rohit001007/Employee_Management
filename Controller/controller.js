@@ -5,7 +5,6 @@ class employeeController {
     addDataController = (req, res) => {
 
         try { 
-                console.log(req.body)
                 service.addDataService(req.body).then((result) => {
                     response.success = true
                     response.message = result.message
@@ -60,7 +59,6 @@ class employeeController {
     updateDataController = (req,res) => {
 
         try {
-                console.log("In Controller",req.body,req.params)
                 service.updateDataService(req).then((result) => {
                     response.success = true
                     response.message = result.message
@@ -79,7 +77,6 @@ class employeeController {
     deleteDataController = (req,res) => {
 
         try {
-                console.log(req.body)
                 service.deleteDataService(req).then((result) => {
                     response.success = true
                     response.message = result.message

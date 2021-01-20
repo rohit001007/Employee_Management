@@ -23,7 +23,7 @@ function check() {
     let mobilePattern = RegExp(`^([+][1-9]{1,3}[- ]?)?[1-9]{10}$`);
         if (mobilePattern.test(mobile) == false){
             document.getElementById('mobile_err').innerHTML = "*Enter Mobile-Number Properly";
-            // return false;
+            return false;
         }
     return true;
 }

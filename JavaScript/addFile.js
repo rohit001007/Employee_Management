@@ -23,8 +23,6 @@ companyName = $('#companyName');
             "companyName" : companyName.val()
         };
 
-        console.log(data)
-
         $.ajax({
             type : 'POST',
             url : 'http://localhost:9000/api/employee/create',

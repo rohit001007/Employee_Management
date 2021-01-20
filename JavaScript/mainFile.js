@@ -52,7 +52,6 @@ $(document).ready(function () {
   companyName = $('#companyName');
   })
 
-
 function updateData ()  {
 
   var dataObj = {
@@ -64,12 +63,10 @@ function updateData ()  {
   };
   console.log("Data In Update Data",dataObj)
 
-  var id = localStorage.getItem('employeeId')
     $.ajax({
       type:"PUT",
       url: `http://localhost:9000/api/employee/update/${id}`,
       contentType:"application/json",
-
       data:JSON.stringify(dataObj),
       success: function(data){
         console.log("Data Update Sucessfully",data)
