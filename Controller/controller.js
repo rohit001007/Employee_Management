@@ -60,7 +60,7 @@ class employeeController {
     updateDataController = (req,res) => {
 
         try {
-                console.log(req.body)
+                console.log("In Controller",req.body,req.params)
                 service.updateDataService(req).then((result) => {
                     response.success = true
                     response.message = result.message

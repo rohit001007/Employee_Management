@@ -55,26 +55,25 @@ $(document).ready(function () {
 
 function updateData ()  {
 
-  var data = {
+  var dataObj = {
     "firstName" : firstName.val(),
     "lastName" : lastName.val(),
     "eMail" : eMail.val(),
     "mobile" : mobile.val(),
     "companyName" : companyName.val()
   };
-  console.log(data)
-
-
+  console.log("Data In Update Data",dataObj)
 
   var id = localStorage.getItem('employeeId')
     $.ajax({
       type:"PUT",
       url: `http://localhost:9000/api/employee/update/${id}`,
-      data:data,
-      success: function(data){
-        console.log(data)
-        alert(data.message)
+      contentType:"application/json",
 
+      data:JSON.stringify(dataObj),
+      success: function(data){
+        console.log("Data Update Sucessfully",data)
+        alert(data.message)
       }
   })
 }
